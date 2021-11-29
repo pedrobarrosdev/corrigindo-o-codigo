@@ -9,8 +9,6 @@ app.use(express.json());
 const repositories = [];
 
 function checksExistsRepository(request, response, next) {
-  // I got help to solve this particular problem from prenato84's solution at https://github.com/prenato84/ignite-template-corrigindo-o-codigo/blob/main/src/index.js
-
   const { id } = request.params;
 
   repositoryIndex = repositories.findIndex(
