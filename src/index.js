@@ -45,8 +45,6 @@ app.post("/repositories", (request, response) => {
 }); // DONE
 
 app.put("/repositories/:id", checksExistsRepository, (request, response) => {
-  // I got help to solve this particular problem from prenato84's solution at https://github.com/prenato84/ignite-template-corrigindo-o-codigo/blob/main/src/index.js
-
   const { title, url, techs } = request.body;
 
   const { repositoryIndex } = request;
