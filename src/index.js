@@ -26,7 +26,7 @@ function checksExistsRepository(request, response, next) {
 
 app.get("/repositories", (request, response) => {
   return response.json(repositories);
-}); // DONE
+});
 
 app.post("/repositories", (request, response) => {
   const { title, url, techs } = request.body;
@@ -42,7 +42,7 @@ app.post("/repositories", (request, response) => {
   repositories.push(repository);
 
   return response.status(201).json(repository);
-}); // DONE
+});
 
 app.put("/repositories/:id", checksExistsRepository, (request, response) => {
   const { title, url, techs } = request.body;
